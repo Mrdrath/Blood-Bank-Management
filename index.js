@@ -15,6 +15,8 @@ const signature = {
   signed: KEY,
   maxAge: 2 * 24 * 60 * 60 * 1000,
 };
+const dotenv = require('dotenv')
+dotenv.config({path:__dirname+'/.env'});
 const escapeRegExp = (string) => {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 };
