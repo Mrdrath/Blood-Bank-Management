@@ -10,7 +10,7 @@ var mongoose = require('mongoose');
 var userModel = require('./models/user');
 
 const KEY = process.env.KEY;
-const dburi = process.env.DBURI ||3000;
+const dburi = process.env.DBURI.toString() ||'development';
 const signature = {
   signed: KEY,
   maxAge: 2 * 24 * 60 * 60 * 1000,
